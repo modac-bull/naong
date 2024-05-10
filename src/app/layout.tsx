@@ -1,5 +1,6 @@
-import GlobalStyles from '@/styles/GlobalStyles'
+'use client'
 
+import GlobalStyles from '@/styles/GlobalStyles'
 export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en">

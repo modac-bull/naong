@@ -2,7 +2,7 @@ import babelPluginTypescript from '@babel/plugin-syntax-typescript'
 import babelPluginMacros from 'babel-plugin-macros'
 import * as path from 'path'
 import * as url from 'url'
-// import babelPluginTwin from 'babel-plugin-twin'
+import babelPluginTwin from 'babel-plugin-twin'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
@@ -32,8 +32,14 @@ export default function withTwin(
             loader: 'babel-loader',
             options: {
               sourceMaps: options.dev,
+              presets: [
+                [
+                  '@babel/preset-react',
+                  { runtime: 'automatic', importSource: '@emotion/react' },
+                ],
+              ],
               plugins: [
-                // babelPluginTwin, // Optional
+                babelPluginTwin, // Optional
                 babelPluginMacros,
                 [babelPluginTypescript, { isTSX: true }],
               ],

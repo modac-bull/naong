@@ -1,12 +1,5 @@
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+'use client'
 
-const App = () => (
-  <Container hasBackground>
-    <Button variant="primary">Submit</Button>
-    <Button variant="secondary">Cancel</Button>
-    <Button isSmall>Close</Button>
-  </Container>
-)
+const App = () => <div tw="text-2xl">메인</div>
 
 export default App
