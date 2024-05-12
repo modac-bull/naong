@@ -8,7 +8,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier --cache --write .",
+    "lint": "eslint --cache",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -36,6 +38,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.1",
     "globals": "^15.2.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "twin.macro": "^3.4.1",
