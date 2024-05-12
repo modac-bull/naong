@@ -1,6 +1,15 @@
 'use client'
 
-const App = () => <div tw="text-2xl">메인</div>
+import tw, { css } from 'twin.macro'
 
+const MainPage = () => (
+  <div
+    css={css`
+      border: 1px solid red;
+    `}
+  >
+    메인
+  </div>
+)
 
-export default App
+export default MainPage
