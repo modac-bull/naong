@@ -1,15 +1,20 @@
 'use client'
 
-import tw, { css } from 'twin.macro'
+import { css } from 'twin.macro'
 
-const MainPage = () => (
-  <div
-    css={css`
-      border: 1px solid red;
-    `}
-  >
-    메인
-  </div>
-)
+import { Button } from '@/components/Button'
+
+const MainPage = () => {
+  return (
+    <div
+      css={css`
+        border: 1px solid red;
+      `}
+    >
+      메인
+      <Button>버튼</Button>
+    </div>
+  )
+}
 
 export default MainPage

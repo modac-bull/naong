@@ -1,8 +1,9 @@
 'use client'
 
-import tw from 'twin.macro'
-import { Logo } from '@/components/Logo'
 import { ReactNode } from 'react'
+import tw from 'twin.macro'
+
+import { Logo } from './Logo'
 
 const styles = {
   // Move long class sets out of jsx to keep it scannable
