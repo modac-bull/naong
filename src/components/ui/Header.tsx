@@ -66,11 +66,18 @@ const Inner = styled.div<{ isFixed: boolean }>`
 const Menu = styled.ul`
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 15px;
+  @media (min-width: ${theme`screens.md`}) {
+    gap: 60px;
+  }
 `
 
 const MenuItem = styled.li`
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
+  @media (min-width: ${theme`screens.md`}) {
+    font-size: 18px;
+    gap: 60px;
+  }
 `
