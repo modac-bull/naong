@@ -13,6 +13,7 @@ const MainPage = () => {
           <Box tw="bg-tertiary-90" />
         </div>
       </section>
+      <section tw="h-[100vh]">2번째</section>
     </div>
   )
 }

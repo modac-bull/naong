@@ -1,6 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
+    variables: {
+      maxWidth: '1600px',
+      gutterPc: '45px',
+      gutterMobile: '20px',
+      headerHeight: '140px',
+      headerHeightMobile: '80px',
+    },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+      '2xl': '1600px',
+    },
     colors: {
       schemes: {
         light: {

@@ -1,16 +1,25 @@
 import React from 'react'
-import { styled, theme } from 'twin.macro'
+import { css, styled, theme } from 'twin.macro'
 
-export const Header = () => {
+import Area from '../layouts/Area'
+
+interface Props {
+  isFixed?: boolean
+}
+
+export const Header = ({ isFixed = false }) => {
   return (
     <HeaderContainer>
       {/* 로고 */}
-      <Inner>
-        <LogoWrapper>Naong & Ingmu</LogoWrapper>
-        <Menu>
-          <MenuItem>메뉴1</MenuItem>
-          <MenuItem>메뉴2</MenuItem>
-        </Menu>
+      <Inner isFixed={isFixed}>
+        <Area tw="flex items-center justify-between">
+          <LogoWrapper>Naong & Ingmu</LogoWrapper>
+          <Menu>
+            <MenuItem>About Me</MenuItem>
+            <MenuItem>Artwork</MenuItem>
+            <MenuItem>Contact</MenuItem>
+          </Menu>
+        </Area>
       </Inner>
     </HeaderContainer>
   )
@@ -22,34 +31,46 @@ const LogoWrapper = styled.div`
   justify-content: center;
   width: 120px;
   height: 50px;
-  background-color: ${theme`colors.neutral-variant.90`};
+  // 임시 배경
+  background-color: ${theme`colors.schemes.light.secondaryFixedDim`};
 `
 
 const HeaderContainer = styled.header`
-  border-bottom: 1px solid ${theme`colors.schemes.light.outlineVariant`};
+  height: ${theme`variables.headerHeightMobile`};
+  @media (min-width: ${theme`screens.md`}) {
+    height: ${theme`variables.headerHeight`};
+  }
 `
 
-const Inner = styled.div`
+const Inner = styled.div<{ isFixed: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gutter */
-  padding: 0 30px;
-  height: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
+  height: ${theme`variables.headerHeightMobile`};
+  @media (min-width: ${theme`screens.md`}) {
+    height: ${theme`variables.headerHeight`};
+  }
+  border-bottom: 1px solid ${theme`colors.schemes.light.outlineVariant`};
+  background-color: ${theme`colors.schemes.light.background`};
+  ${({ isFixed }) =>
+    isFixed &&
+    css`
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    `}
 `
 
 const Menu = styled.ul`
   display: flex;
   align-items: center;
-  gap: 10px;
-  li {
-  }
+  gap: 40px;
 `
 
 const MenuItem = styled.li`
-  /* color: ${theme`colors.primary`}; */
-  font-weight: 600;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
 `

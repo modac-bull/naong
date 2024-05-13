@@ -8,7 +8,9 @@ import '@/styles/font.css'
 
 const customStyles = css({
   body: {
-    fontFamily: theme`fontFamily.`,
+    fontFamily: theme`fontFamily.pretendard`,
+    fontSize: 16,
+    fontWeight: 400,
     backgroundColor: theme`colors.schemes.light.background`,
     WebkitTapHighlightColor: theme`colors.schemes.light.scrim`,
     ...tw`antialiased`,
