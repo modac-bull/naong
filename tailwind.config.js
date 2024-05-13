@@ -411,6 +411,11 @@ module.exports = {
         100: '#FFFFFF',
       },
     },
+    extend: {
+      fontFamily: {
+        pretendard: ['Pretendard', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
