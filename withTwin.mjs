@@ -1,8 +1,8 @@
 import babelPluginTypescript from '@babel/plugin-syntax-typescript'
 import babelPluginMacros from 'babel-plugin-macros'
+import babelPluginTwin from 'babel-plugin-twin'
 import * as path from 'path'
 import * as url from 'url'
-import babelPluginTwin from 'babel-plugin-twin'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 

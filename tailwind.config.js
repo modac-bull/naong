@@ -427,7 +427,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        pretendard: ['Pretendard', 'sans-serif'],
+        // pretendard: ['Pretendard', 'sans-serif'],
+        pretendard: ['var(--font-pretendard)'],
       },
     },
   },
