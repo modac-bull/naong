@@ -6,12 +6,7 @@ interface Props {
 }
 
 export default function Area({ className, children }: Props) {
-  return (
-    <AreaContainer className={className}>
-      <p>글꼴 테스트</p>
-      {children}
-    </AreaContainer>
-  )
+  return <AreaContainer className={className}>{children}</AreaContainer>
 }
 
 const AreaContainer = styled.div`
