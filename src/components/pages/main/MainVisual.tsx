@@ -101,7 +101,7 @@ const CustomSwiperSlide = styled(SwiperSlide)`
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - env(safe-area-inset-bottom));
 `
 const BgDim = styled.div`
   position: absolute;
