@@ -5,4 +5,11 @@ import withTwin from './withTwin.mjs'
  */
 export default withTwin({
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 })

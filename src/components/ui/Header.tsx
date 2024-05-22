@@ -43,10 +43,10 @@ const LogoWrapper = styled.div`
 `
 
 const HeaderContainer = styled.header`
-  height: ${theme`variables.headerHeightMobile`};
+  /* height: ${theme`variables.headerHeightMobile`};
   @media (min-width: ${theme`screens.md`}) {
     height: ${theme`variables.headerHeight`};
-  }
+  } */
 `
 
 const Inner = styled.div<{ isFixed: boolean; isScrolled: boolean }>`
@@ -60,6 +60,7 @@ const Inner = styled.div<{ isFixed: boolean; isScrolled: boolean }>`
   ${({ isScrolled }) =>
     isScrolled &&
     css`
+      background-color: ${theme`colors.schemes.light.background`};
       height: calc(${theme`variables.headerHeightMobile`} - 10px);
       @media (min-width: ${theme`screens.md`}) {
         height: calc(${theme`variables.headerHeight`} - 40px);
@@ -67,8 +68,9 @@ const Inner = styled.div<{ isFixed: boolean; isScrolled: boolean }>`
     `}
 
   border-bottom: 1px solid ${theme`colors.schemes.light.outlineVariant`};
-  background-color: ${theme`colors.schemes.light.background`};
-  transition: height 0.5s;
+  transition:
+    height 0.5s,
+    background-color 0.5s;
   ${({ isFixed }) =>
     isFixed &&
     css`

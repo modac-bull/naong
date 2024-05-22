@@ -3,10 +3,12 @@
 import { styled } from 'twin.macro'
 
 import Area from '@/components/layouts/Area'
+import { MainVisual } from '@/components/pages/main/MainVisual'
 
 const MainPage = () => {
   return (
     <div>
+      <MainVisual />
       <section>
         <Area>
           <div tw="grid grid-cols-4">
